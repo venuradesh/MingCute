@@ -1,0 +1,491 @@
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.status{
+  background: #007AFF;
+}
+.bg_white{
+  background: #ffffff;
+}
+.bg_gray{
+  background: #0f53b847;
+}
+.primary_text{
+  color: #ADADC0 !important;
+}
+.table_text{
+  color: #828282 !important;
+}
+.secondary_text{
+  color: #b5b5b5 !important;
+}
+.green_text{
+  color: rgba(7, 104, 81, 1);
+}
+.title_text{
+  color: #1B2130 !important
+}
+.fancy_text{
+  color: #1b2130cc !important
+}
+.lighblack_text{
+  color: #333333
+}
+.fancy_title{
+  color: #38A3C5
+}
+.light_text{
+  color: #fff !important;
+}
+.primary_bg{
+  background-color: #1B2130 !important;
+}
+.primary_btn{
+  border-radius: 30px;
+  border: 2px solid #1B2130;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+.clickable{
+  cursor: pointer !important
+}
+
+.proceed_btn{
+  background-color: #FF9933
+}
+.pay_confirm{
+  background: #111729;
+  border-radius: 12px;
+  color: #fff;
+  width: 70%;
+}
+.row{
+  --bs-gutter-x:0 !important
+}
+.navbar svg path{
+  fill: #ADADC0 !important
+}
+.sidebar_div{
+  width: 20%;
+  min-width: 250px;
+  height:100vh;
+  overflow-y: auto;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.side_search_grp{
+  color: #fff !important;
+  background-color:#161b27
+}
+.side_search_grp input{
+  background-color: transparent;
+  border: none
+}
+.side_search_grp::placeholder{
+  color: rgb(81, 81, 81)
+}
+.side_search_grp path {
+  fill: #a0a0a0 !important;
+}
+.side_search_grp svg {
+  width: 17px;
+  height: 25px
+}
+.sidenav_body{
+  position: relative;
+}
+.logout{
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.06);
+  border-radius: 0px 0px 8px 8px;
+}
+.dash path{
+  fill: #a0a0a0 !important;
+}
+.side_body{
+  border-bottom: .5px solid #a0a0a0;
+}
+.side_body ul{
+  list-style: none;
+}
+.side_body ul path{
+  fill: #fff
+}
+li{
+  border-radius: 5px;
+  padding: 5px ;
+}
+li:hover  {
+  fill: #a0a0a0 !important;
+  background-color: rgba(255, 255, 255, 0.126);
+}
+li:hover h6{
+  color: #fff !important
+}
+.dash_body{
+  height: 100vh;
+}
+.main_board{
+  height: 100vh !important;
+  overflow-y: auto;
+}
+.main_board .card_body{
+  min-height: 300px;
+}
+.main_board .card_body .big_card{
+  width: 90%;
+  min-width: 250px;
+  min-height: 70vh;
+}
+.place_btn{
+  background: #B4D6F1;
+  order: 2px solid #000000;
+  border-radius: 30px;
+}
+.card_detail ul{
+  list-style: none;
+}
+.add_title{
+  color: #FF9933;
+}
+.summary td svg{
+  vertical-align: baseline;
+}
+.contact_card{
+  width: 50%;
+  min-width: 300px;
+}
+.summary_card{
+  width: 50%;
+  min-width: 300px;
+}
+.search_grp {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 40%;
+  min-width: 300px;
+  max-width: 500px;
+}
+.search_grp input{
+  background-color: transparent;
+  border: none;
+}
+.form-check-input{
+  vertical-align:baseline
+}
+.req_card .proceed_btn{
+  min-width: 200px;
+}
+.shedule_table .table_card{
+  margin-top: -5px !important;
+}
+.schedules .title_tab{
+  border-radius: 10px 10px 0 0;
+  background: #B4D6F1;
+  width: 48%
+}
+.schedules .table_card{
+  border: 1px solid rgba(108, 106, 106, 0.65);
+  border-radius: 8px;
+  margin-top: -8px !important;
+}
+.leave_table .table_card {
+  /* border-radius: 16px; */
+}
+.leave_table{
+  width: 90%;
+}
+.req_card{
+  width: 90%
+}
+.method_card{
+  border-radius: 12px;
+  min-width: 300px;
+}
+.weather_card{
+  width: 250px;
+  background-color: transparent;
+  color: #fff;
+}
+.weather{
+  /* background-color: black; */
+  color: #fff;
+  
+}
+.weather .card{
+  border: .5px solid rgba(255, 255, 255, 0.645);
+  border-radius: 10px;
+}
+.big_wtr_card{
+  min-width: 150px;
+}
+.big_wtr_card .card , .small_wtr_card .card{
+  background-color: transparent;
+  
+}
+.weather_page{
+  background-color: black;
+}
+.card_img_div{
+  width: 100%;
+  height: auto;
+}
+.card_img_div img{
+  min-width: 100%;
+  height: 100%;
+}
+.day_weather{
+  background-color: rgb(31, 31, 31);
+}
+.small_wtr_card{
+  min-width: 90px;
+}
+.big_wtr_card .temp{
+  color: #fff;
+}
+.small_wtr_card .temp{
+  color: rgba(255, 255, 255, 0.649);
+}
+.small_wtr_card img{
+  width: 100px;
+  height: auto
+}
+.big_wtr_card img{
+  width: 140px;
+  height: auto
+}
+.wtr_day{
+  background-color: gray;
+  color: #fff;
+  padding-bottom: 10px;
+}
+.upcoming .event{
+  height: 30px;
+  border: 1px solid black
+}
+.upcoming{
+  background-color: #D9D9D9;
+}
+.short_btn{
+  background-color: #D9D9D9;
+}
+.frame .frame_head{
+  background: #EDEDED;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #38A3C5;
+}
+.frame{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.frame .subtitle{
+  color: #38A3C5
+}
+.active_location{
+  background: rgba(0, 0, 0, 0.25);
+  border: 3px solid #FF0000;
+}
+.place_location{
+  background: #E4E4F0;
+} 
+.place_location .search_grp{
+  width: 35% !important;
+  background: #fff !important
+}
+.vehicle_table .search_grp{
+  width: 35% !important;
+  background: #fff !important
+}
+.place_pill, .district_btn{
+  background-color: #FFFFFF;
+}
+.vehicle_table .note_row td{
+  background: #E0E4F6;
+}
+.pending{
+  color: #FFBC10;
+  background: #FEFFE6;
+  border-radius: 8px;
+}
+.noted{
+  color: #18AB56;
+  background: #F0FFF8;
+  border-radius: 8px;
+}
+.payment_card .payment_big_card{
+  width: 80%
+}
+.selected_card{
+  border: 2px solid black
+}
+.pagination_input{
+  width: 50px
+}
+.profile .col-md-8{
+  background: #C8C8FF;
+}
+.profile .col-md-4{
+  background: #596653;
+}
+.card_user{
+  background: rgba(255, 255, 255, 0.54);
+}
+.profile .imgdiv{
+  width:auto;
+  height:auto
+}
+.imgdiv{
+  position: relative;
+}
+.update_img{
+  position: absolute;
+  bottom:0;
+  right:0
+}
+.badge_card{
+  border-bottom: 1px  Solid#FDFBFB;
+  width: 95%;
+}
+.star_circle{
+  background-color: #F44336;
+}
+.file_input{
+    visibility: none;
+    display: none
+}
+.profile_form{
+  width: 80%;
+}
+.back_btn{
+  background-color: #007AFF;
+  border-radius: 20px;
+}
+.update_btn{
+  background-color: #3EB81F;
+  border-radius: 20px;
+}
+.login_page .log_left{
+  background-color: black;
+}
+.login_page{
+  height:100vh
+}
+.login_page .log_rgt{
+  background-color: white;
+  border-radius: 24px 0 0 24px;
+}
+.login_card{
+  width: 50%;
+  min-width: 400px;
+}
+.login_card button{
+  background-color: #279574;
+  border-radius: 8px;
+  width: 90%;
+  min-width: 250px;
+}
+.login_card .log_input{
+  border-bottom: 1px solid #b5b5b5 !important;
+  border-radius: 0;
+  border: none;
+}
+.reg_form select{
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.reg_form option{
+  background-color: white;
+}
+.reg_form{
+  border-radius: 20px;
+  width: 90%
+}
+.reg_form .number{
+    margin-top: -30px;
+    width: 30px;
+    height: 26px;
+    z-index: 2
+}
+.reg_form .personal_inpt{
+  border-radius: 15zpx;
+}
+.manage_schedule .inner_card{
+  width: 85%
+}
+.chart_card{
+  width: 200px;
+  height: auto 
+}
+
+.chart{
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  width: 140px;
+  height: 140px;
+  
+}
+.blu_bg{
+  background-color: #C8C8FF;
+}
+.cart_cards{
+  border-radius: 20px;
+}
+.feedback .positive{
+  background-color: #E9FFE5;
+  color: #31FF10;
+  border-radius: 8px !important;
+}
+.feedback .neutral{
+  background-color: #f9df571f;
+  color: #F1EA42;
+  border-radius: 8px !important;
+}
+.feedback .negative{
+  background-color: #f4ccca63;
+  color: #e51515e0;
+  border-radius: 8px !important;
+}
+
+.feedback span{
+  width: 30px;
+  height: 30px
+}
+.feedback thead, .feedback th{
+  background-color: #a8cbf1a1;
+}
+.cover_table{
+  border-radius: 12px ;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #F2F2F0;
+}
+.lbr_card{
+  border-radius: 15px;
+}
+.dark_bg{
+  font-family: 'Poppins', sans-serif !important;
+  background-color: #101010;
+  color: white;
+}
+.feed_div{
+  background-color: #111729;
+}
+@media (max-width:992px){
+  .sidebar_div{
+    width: 20%;
+    min-width: 0 !important;
+  }
+  .profile_form{
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
