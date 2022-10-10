@@ -1,7 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 const table_array = [1, 2, 3, 4, 5, 6, 7, 8];
 
 function Vs02() {
+  const navigate = useNavigate();
+  
+  function viewSummary() {
+    navigate("../schedule/frame7");
+  }
+  function viewSchedule() {
+    navigate("../schedule/frame8");
+  }
   return (
     <div className="h-100 container-fluid">
       <div className="main_body">
@@ -12,10 +21,10 @@ function Vs02() {
             </button>
           </div>
           <div className="mt-3 schedules d-flex align-items-center justify-content-between ">
-            <div className="schedule h6 mb-0 py-2 title_tab text-center">
+            <div onClick={viewSummary} className="schedule clickable h6 mb-0 py-2 title_tab text-center">
               Schedule
             </div>
-            <div className="summary h6 mb-0 py-2 title_tab text-center">
+            <div onClick={viewSchedule} className="summary clickable h6 mb-0 py-2 title_tab text-center">
               Summary
             </div>
           </div>

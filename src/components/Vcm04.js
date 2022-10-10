@@ -1,8 +1,14 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 const table_array=[1,2,3,4,5,6,7,8]
 
 function Vcm04() {
+  const navigate = useNavigate();
+  
+  function vehicleRegister() {
+    navigate("../schedule/frame12");
+  }
   return (
     <div className="h-100   container-fluid">
     <div className="main_body vehicle_table">
@@ -41,7 +47,7 @@ function Vcm04() {
                 <tbody>
                 {
                       table_array.map((cont,index)=>(
-                  <tr >
+                  <tr onClick={vehicleRegister} className='clickable'>
                     <td className=''><h6 className='mb-0'>Albert Flores</h6></td>
                     <td>Hallo</td>
                     <td>2022.07.24 - Friday</td>

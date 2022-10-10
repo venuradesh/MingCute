@@ -2,14 +2,29 @@ import React from "react";
 import logo from "../logo.svg";
 import { useLocation, Link } from "react-router-dom";
 
-function Sidebar() {
+function Sidebar3() {
   return (
     <div className="sidenav_body primary_bg  h-100">
-      <div className="p-2 px-3">
+      <div className="p-2 px-3 ">
 
-      
-      {false && (
-        <div className="back text-center py-2 pb-3">
+        <div className="d-flex align-items-center justify-content-start">
+
+        {true && (
+        <div className="back text-start py-2 pb-3">
+          <svg width="52" height="12" viewBox="0 0 52 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="6" cy="6" r="6" fill="#FF6252"/>
+          <circle cx="6" cy="6" r="5.5" stroke="black" strokeOpacity="0.1"/>
+          <circle cx="26" cy="6" r="6" fill="#FDAD15"/>
+          <circle cx="26" cy="6" r="5.5" stroke="black" strokeOpacity="0.1"/>
+          <circle cx="46" cy="6" r="6" fill="#2AC670"/>
+          <circle cx="46" cy="6" r="5.5" stroke="black" strokeOpacity="0.1"/>
+          </svg>
+
+        </div>
+      )}
+      {true && (
+              <Link to="/admin/frame1">
+        <div className="back text-center ms-4 clickable py-2 pb-3">
           <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
             <g
               id="页面-1"
@@ -38,20 +53,10 @@ function Sidebar() {
             </g>
           </svg>
         </div>
+          </Link>
       )}
-        {true && (
-        <div className="back text-start py-2 pb-3">
-          <svg width="52" height="12" viewBox="0 0 52 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="6" cy="6" r="6" fill="#FF6252"/>
-          <circle cx="6" cy="6" r="5.5" stroke="black" strokeOpacity="0.1"/>
-          <circle cx="26" cy="6" r="6" fill="#FDAD15"/>
-          <circle cx="26" cy="6" r="5.5" stroke="black" strokeOpacity="0.1"/>
-          <circle cx="46" cy="6" r="6" fill="#2AC670"/>
-          <circle cx="46" cy="6" r="5.5" stroke="black" strokeOpacity="0.1"/>
-          </svg>
-
-        </div>
-      )}
+        
+       </div>
 
       <div className="brand_title mb-3 d-flex align-items-center justify-content-center">
         <svg className="mx-2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" >
@@ -111,76 +116,59 @@ function Sidebar() {
       </div>
 
       <div className="side_body pb-4">
-        <div className="dash  my-3 d-flex align-items-end justify-content-center justify-content-lg-start">
+      <Link to="/admin/schedule/frame6" className="link" >
+        <div className="dash clickable selected_side my-3 d-flex align-items-end justify-content-center justify-content-lg-start">
           <div className="me-lg-2 ">
-            <svg
-              className=""
-              width="24px"
-              height="24px"
-              viewBox="0 0 24 24"
-              version="1.1"
-            >
-              <g
-                id="页面-1"
-                stroke="none"
-                strokeWidth="1"
-                fill="none"
-                fillRule="evenodd"
-              >
-                <g
-                  id="Building"
-                  transform="translate(-144.000000, -48.000000)"
-                  fillRule="nonzero"
-                >
-                  <g
-                    id="home_4_fill"
-                    transform="translate(144.000000, 48.000000)"
-                  >
-                    <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
-                    <path
-                      d="M13.2,2.65 C12.4889,2.11667 11.5111,2.11667 10.8,2.65 L3.8,7.9 C3.29639,8.27771 3,8.87049 3,9.5 L3,19 C3,20.1046 3.89543,21 5,21 L8.9,21 C9.50751,21 10,20.5075 10,19.9 L10,15 C10,13.8954 10.8954,13 12,13 C13.1046,13 14,13.8954 14,15 L14,19.9 C14,20.5075 14.4925,21 15.1,21 L19,21 C20.1046,21 21,20.1046 21,19 L21,9.5 C21,8.87049 20.7036,8.27771 20.2,7.9 L13.2,2.65 Z"
-                      id="路径"
-                    ></path>
-                  </g>
-                </g>
-              </g>
-            </svg>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.83331 2.50008V3.33341C5.83331 4.25389 6.5795 5.00008 7.49998 5.00008H12.5C13.4205 5.00008 14.1666 4.25389 14.1666 3.33341V2.50008H15C15.9205 2.50008 16.6666 3.24627 16.6666 4.16675V13.3334C16.6666 16.0948 14.4281 18.3334 11.6666 18.3334H4.99998C4.0795 18.3334 3.33331 17.5872 3.33331 16.6667V4.16675C3.33331 3.24627 4.0795 2.50008 4.99998 2.50008H5.83331ZM9.99998 11.6667H7.49998C7.03975 11.6667 6.66665 12.0398 6.66665 12.5001C6.66665 12.9603 7.03975 13.3334 7.49998 13.3334H9.99998C10.4602 13.3334 10.8333 12.9603 10.8333 12.5001C10.8333 12.0398 10.4602 11.6667 9.99998 11.6667ZM12.5 8.33341H7.49998C7.03975 8.33341 6.66665 8.7065 6.66665 9.16675C6.66665 9.59412 6.98835 9.94634 7.4028 9.99448L7.49998 10.0001H12.5C12.9602 10.0001 13.3333 9.627 13.3333 9.16675C13.3333 8.7065 12.9602 8.33341 12.5 8.33341ZM11.6666 1.66675C12.1269 1.66675 12.5 2.03985 12.5 2.50008C12.5 2.92744 12.1783 3.27967 11.7638 3.32781L11.6666 3.33341H8.33331C7.87308 3.33341 7.49998 2.96031 7.49998 2.50008C7.49998 2.07272 7.82168 1.72049 8.23613 1.67235L8.33331 1.66675H11.6666Z" 
+              fill="#007AFF" fillOpacity="1"/>
+              </svg>
           </div>
-          <h6 className="mb-0 secondary_text d-none d-lg-block">Dashboard</h6>
+          <h6 className="mb-0 secondary_text  d-none d-lg-block">Schedule Management</h6>
         </div>
+        </Link>
 
         <ul className="ps-0 ps-lg-4">
-        <li
+          <li
             className={`my-4  `}
           >
-            <Link to="/admin/frame1" className="d-flex clickable align-items-center justify-content-center justify-content-lg-start"  aria-current="page">
+             <Link to="/admin/schedule/frame5"  className={` d-flex clickable align-items-center justify-content-center justify-content-lg-start `}>
             <div className="me-lg-2 ">
-              <svg width='24px' height='24px' viewBox='0 0 24 24' version='1.1'><g id='页面-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
-                <g id='Map' transform='translate(0.000000, -48.000000)' fill-rule='nonzero'><g id='location_fill' transform='translate(0.000000, 48.000000)'>
-                  <rect id='矩形' x='0' y='0' width='24' height='24'></rect><path d='M12,2 C16.9706,2 21,6.02944 21,11 C21,14.0738 19.3241,16.5892 17.5584,18.3945 C16.5896727,19.3848818 15.5596562,20.1973165 14.6817052,20.8113077 L14.2563896,21.1016714 C14.1879449,21.1472775 14.1208032,21.1914819 14.0550879,21.2342726 L13.6789009,21.4739579 L13.6789009,21.4739579 L13.3428744,21.6791459 L13.3428744,21.6791459 L12.9271,21.921 L12.9271,21.921 C12.3479,22.2481 11.6521,22.2481 11.0729,21.921 L10.6571257,21.6791459 L10.6571257,21.6791459 L10.1376557,21.3583918 C10.0749168,21.3184403 10.010628,21.2770633 9.94491277,21.2342726 L9.53449244,20.9606593 C8.61244219,20.3314866 7.49106273,19.4674136 6.44162,18.3945 C4.6759,16.5892 3,14.0738 3,11 C3,6.02944 7.02944,2 12,2 Z M12,8 C10.3431,8 9,9.34315 9,11 C9,12.6569 10.3431,14 12,14 C13.6569,14 15,12.6569 15,11 C15,9.34315 13.6569,8 12,8 Z' id='形状'
-               fill='#FFFFF'></path></g></g></g></svg>
-
-            </div>
-            <h6 className="mb-0 text-wrap secondary_text d-none d-lg-block">
-              City Map
-            </h6>
-            </Link>
-          </li>
-          <li
-            className={`my-4 d-flex clickable align-items-center justify-content-center justify-content-lg-start `}
-          >
-            <div className="me-lg-2 ">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.83331 2.50008V3.33341C5.83331 4.25389 6.5795 5.00008 7.49998 5.00008H12.5C13.4205 5.00008 14.1666 4.25389 14.1666 3.33341V2.50008H15C15.9205 2.50008 16.6666 3.24627 16.6666 4.16675V13.3334C16.6666 16.0948 14.4281 18.3334 11.6666 18.3334H4.99998C4.0795 18.3334 3.33331 17.5872 3.33331 16.6667V4.16675C3.33331 3.24627 4.0795 2.50008 4.99998 2.50008H5.83331ZM9.99998 11.6667H7.49998C7.03975 11.6667 6.66665 12.0398 6.66665 12.5001C6.66665 12.9603 7.03975 13.3334 7.49998 13.3334H9.99998C10.4602 13.3334 10.8333 12.9603 10.8333 12.5001C10.8333 12.0398 10.4602 11.6667 9.99998 11.6667ZM12.5 8.33341H7.49998C7.03975 8.33341 6.66665 8.7065 6.66665 9.16675C6.66665 9.59412 6.98835 9.94634 7.4028 9.99448L7.49998 10.0001H12.5C12.9602 10.0001 13.3333 9.627 13.3333 9.16675C13.3333 8.7065 12.9602 8.33341 12.5 8.33341ZM11.6666 1.66675C12.1269 1.66675 12.5 2.03985 12.5 2.50008C12.5 2.92744 12.1783 3.27967 11.7638 3.32781L11.6666 3.33341H8.33331C7.87308 3.33341 7.49998 2.96031 7.49998 2.50008C7.49998 2.07272 7.82168 1.72049 8.23613 1.67235L8.33331 1.66675H11.6666Z" 
-              fill="#FFFFF" fillOpacity="1"/>
+              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g
+                  id="页面-1"
+                  stroke="none"
+                  strokeWidth="1"
+                  fill="none"
+                  fillRule="evenodd"
+                >
+                  <g
+                    id="Weather"
+                    transform="translate(-576.000000, -48.000000)"
+                    fillRule="nonzero"
+                  >
+                    <g
+                      id="sun_cloudy_fill"
+                      transform="translate(576.000000, 48.000000)"
+                    >
+                      <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
+                      <path
+                        d="M11,6 C13.6623,6 15.9179,7.73309 16.7033,10.1322 C19.1625,10.6813 21,12.8756 21,15.5 C21,18.4635122 18.6562522,20.8795407 15.7212095,20.9956329 L15.5,21 L6.5,21 C4.01472,21 2,18.9853 2,16.5 C2,14.5384 3.2545,12.8708 5.00531,12.2544 C5.00178,12.17 5,12.0852 5,12 C5,8.68629 7.68629,6 11,6 Z M16.0001,3 C19.3138,3 22.0001,5.68629 22.0001,9 C22.0001,10.1679 21.6664,11.2578 21.0892,12.1797 C20.2816,10.8231 18.994,9.78544 17.4608,9.30094 C16.4667,6.92421 14.1994,5.21247 11.5115,5.0184 C12.6106,3.78022 14.2142,3 16.0001,3 Z"
+                        id="形状"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
               </svg>
             </div>
             <h6 className="mb-0 secondary_text d-none d-lg-block">
-            Employee Management
+              Weather Forcasting
             </h6>
+            </Link>
           </li>
 
-          <li className="my-4 d-flex clickable align-items-center justify-content-center justify-content-lg-start">
+          <li className="my-4">
+          <Link to="/admin/schedule/frame3"  className={` d-flex clickable align-items-center justify-content-center justify-content-lg-start `}>
             <div className="me-lg-2 ">
               <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                 <g
@@ -210,82 +198,13 @@ function Sidebar() {
               </svg>
             </div>
             <h6 className="mb-0 secondary_text d-none d-lg-block">
-            Feedback Management
-            </h6>
-          </li>
-
-          <li className="my-4 ">
-          <Link to="/admin/schedule/frame6" className="d-flex clickable align-items-center justify-content-center justify-content-lg-start"  aria-current="page">
-            <div className="me-lg-2 ">
-              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  strokeWidth="1"
-                  fill="none"
-                  fillRule="evenodd"
-                >
-                  <g
-                    id="Business"
-                    transform="translate(-144.000000, -48.000000)"
-                    fillRule="nonzero"
-                  >
-                    <g
-                      id="calendar_fill"
-                      transform="translate(144.000000, 48.000000)"
-                    >
-                      <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
-                      <path
-                        d="M21,12 L21,19 C21,20.1046 20.1046,21 19,21 L5,21 C3.89543,21 3,20.1046 3,19 L3,12 L21,12 Z M16,3 C16.5523,3 17,3.44772 17,4 L17,5 L19,5 C20.1046,5 21,5.89543 21,7 L21,10 L3,10 L3,7 C3,5.89543 3.89543,5 5,5 L7,5 L7,4 C7,3.44772 7.44772,3 8,3 C8.55228,3 9,3.44772 9,4 L9,5 L15,5 L15,4 C15,3.44772 15.4477,3 16,3 Z"
-                        id="形状"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-            </div>
-            <h6 className="mb-0 secondary_text d-none d-lg-block">
-            Schedule Management
+              Leave Management
             </h6>
             </Link>
           </li>
 
-          <li className="my-4 d-flex clickable align-items-center justify-content-center justify-content-lg-start">
-            <div className="me-lg-2 ">
-              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                <g
-                  id="页面-1"
-                  stroke="none"
-                  strokeWidth="1"
-                  fill="none"
-                  fillRule="evenodd"
-                >
-                  <g
-                    id="Contact"
-                    transform="translate(0.000000, -48.000000)"
-                    fillRule="nonzero"
-                  >
-                    <g
-                      id="chat_1_fill"
-                      transform="translate(0.000000, 48.000000)"
-                    >
-                      <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
-                      <path
-                        d="M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 L4,22 C2.89543,22 2,21.1046 2,20 L2,12 C2,6.47715 6.47715,2 12,2 Z M12,14 L9,14 C8.44772,14 8,14.4477 8,15 C8,15.5523 8.44772,16 9,16 L12,16 C12.5523,16 13,15.5523 13,15 C13,14.4477 12.5523,14 12,14 Z M15,10 L9,10 C8.44772,10 8,10.4477 8,11 C8,11.51285 8.38604429,11.9355092 8.88337975,11.9932725 L9,12 L15,12 C15.5523,12 16,11.5523 16,11 C16,10.48715 15.613973,10.0644908 15.1166239,10.0067275 L15,10 Z"
-                        id="形状"
-                      ></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-            </div>
-            <h6 className="mb-0 secondary_text d-none d-lg-block">
-              Additional Requests
-            </h6>
-          </li>
-
-
-          <li className="my-4 d-flex clickable align-items-center justify-content-center justify-content-lg-start">
+          <li className="my-4 ">
+          <Link to="/admin/schedule/frame11"  className={` d-flex clickable align-items-center justify-content-center justify-content-lg-start `}>
             <div className="me-lg-2 ">
               <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                 <g
@@ -317,10 +236,80 @@ function Sidebar() {
             <h6 className="mb-0 secondary_text d-none d-lg-block">
               Vehichle Condition Monitoring
             </h6>
+            </Link>
           </li>
 
-          
-          
+          <li className="my-4 ">
+          <Link to="/admin/schedule/frame14"  className={` d-flex clickable align-items-center justify-content-center justify-content-lg-start `}>
+            <div className="me-lg-2 ">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g
+                  id="页面-1"
+                  stroke="none"
+                  strokeWidth="1"
+                  fill="none"
+                  fillRule="evenodd"
+                >
+                  <g
+                    id="Contact"
+                    transform="translate(0.000000, -48.000000)"
+                    fillRule="nonzero"
+                  >
+                    <g
+                      id="chat_1_fill"
+                      transform="translate(0.000000, 48.000000)"
+                    >
+                      <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
+                      <path
+                        d="M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 L4,22 C2.89543,22 2,21.1046 2,20 L2,12 C2,6.47715 6.47715,2 12,2 Z M12,14 L9,14 C8.44772,14 8,14.4477 8,15 C8,15.5523 8.44772,16 9,16 L12,16 C12.5523,16 13,15.5523 13,15 C13,14.4477 12.5523,14 12,14 Z M15,10 L9,10 C8.44772,10 8,10.4477 8,11 C8,11.51285 8.38604429,11.9355092 8.88337975,11.9932725 L9,12 L15,12 C15.5523,12 16,11.5523 16,11 C16,10.48715 15.613973,10.0644908 15.1166239,10.0067275 L15,10 Z"
+                        id="形状"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <h6 className="mb-0 secondary_text d-none d-lg-block">
+              Additional Requests
+            </h6>
+            </Link>
+          </li>
+
+          <li className="my-4 ">
+          <Link to="/admin/schedule/frame13"  className={` d-flex clickable align-items-center justify-content-center justify-content-lg-start `}>
+            <div className="me-lg-2 ">
+              <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                <g
+                  id="页面-1"
+                  stroke="none"
+                  strokeWidth="1"
+                  fill="none"
+                  fillRule="evenodd"
+                >
+                  <g
+                    id="Business"
+                    transform="translate(-144.000000, -48.000000)"
+                    fillRule="nonzero"
+                  >
+                    <g
+                      id="calendar_fill"
+                      transform="translate(144.000000, 48.000000)"
+                    >
+                      <rect id="矩形" x="0" y="0" width="24" height="24"></rect>
+                      <path
+                        d="M21,12 L21,19 C21,20.1046 20.1046,21 19,21 L5,21 C3.89543,21 3,20.1046 3,19 L3,12 L21,12 Z M16,3 C16.5523,3 17,3.44772 17,4 L17,5 L19,5 C20.1046,5 21,5.89543 21,7 L21,10 L3,10 L3,7 C3,5.89543 3.89543,5 5,5 L7,5 L7,4 C7,3.44772 7.44772,3 8,3 C8.55228,3 9,3.44772 9,4 L9,5 L15,5 L15,4 C15,3.44772 15.4477,3 16,3 Z"
+                        id="形状"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <h6 className="mb-0 secondary_text d-none d-lg-block">
+              View Time Table
+            </h6>
+            </Link>
+          </li>
         </ul>
 
 
@@ -346,4 +335,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default Sidebar3;

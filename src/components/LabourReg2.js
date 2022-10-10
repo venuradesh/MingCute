@@ -24,7 +24,7 @@ function LabourReg2() {
             </div>
 
             <form className='p-4'>
-                <h4 className='mb-4'>Details of Working Area</h4>
+                <h5 className='mb-4'>Details of Working Area</h5>
                 <div className='ipt_grp my-2 row d-flex   align-items-center justify-content-start'>
                         <div className='col-md-4'>Division : </div>
                         <div className='col-md-8'>Dematagodda </div>

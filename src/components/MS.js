@@ -1,6 +1,19 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 function MS() {
+
+  const navigate = useNavigate();
+  
+  function veiwSchedule() {
+    navigate("../schedule/frame7");
+  }
+  function veiwTime() {
+    navigate("../schedule/frame9");
+  }
+  function veiwMeeting() {
+    navigate("../schedule/frame10");
+  }
   return (
     <div className="h-100 manage_schedule container-fluid">
       <div className="card_body container mt-5">
@@ -63,12 +76,12 @@ function MS() {
 
             <div className="input_grp mb-3 d-flex align-items-center justify-content-between ">
               <label for="Division" className="fw-bold form-label">
-              Number of working Employees :
+              Number of working Employees:
               </label>
               <select
                 id="Division"
                 type="text"
-                className="px-2 py-1 w-75 form-control"
+                className="px-2 py-1 ms-3 w-75 form-control"
                 placeholder="Number of Employees"
               >
                 <option selected disabled hidden>Number of Employees</option>
@@ -80,12 +93,12 @@ function MS() {
 
             <div className="input_grp mb-3 d-flex align-items-center justify-content-between ">
               <label for="Division" className="fw-bold form-label">
-              Number of working Trucks :
+              Number of working Trucks:
               </label>
               <select
                 id="Division"
                 type="text"
-                className="px-2 w-75 py-1 form-control"
+                className="px-2 w-75 ms-3 py-1 form-control"
                 placeholder="Number of Employees"
               >
                 <option selected disabled hidden>Number of Trucks</option>
@@ -96,12 +109,12 @@ function MS() {
             </div>
             <div className="input_grp mb-3 d-flex align-items-center justify-content-between ">
               <label for="Division" className="fw-bold form-label">
-              Addition Garbage Requests for week :
+              Addition Garbage Requests for week:
               </label>
               <select
                 id="Division"
                 type="text"
-                className="px-2 w-75 py-1 form-control"
+                className="px-2 ms-3 w-75 py-1 form-control"
                 placeholder="Number of Employees"
               >
                 <option selected disabled hidden>Location</option>
@@ -111,15 +124,15 @@ function MS() {
               </select>
             </div>
 
-            <div className="input_grp mb-3 d-flex align-items-center justify-content-between ">
+            <div className="input_grp mb-4 d-flex align-items-center justify-content-between ">
               <label for="Division" className="fw-bold form-label">
-              Events Plan for this Week :
+              Events Plan for this Week:
               </label>
               <div className='d-flex align-items-center justify-content-center w-75'>
-              <button  className=" btn primary_btn  mx-4 px-4 py-1 mb-3 ">
+              <button onClick={veiwTime} className=" btn primary_btn  mx-4 px-4 py-1 ">
               10 Times.com
             </button>
-            <button  className=" btn primary_btn  mx-4 px-4 py-1 mb-3 ">
+            <button onClick={veiwMeeting}  className=" btn primary_btn  mx-4 px-4 py-1  ">
             Meetups.com
             </button>
               </div>
@@ -139,25 +152,25 @@ function MS() {
 
       <h6 className='mt-4'>Municipal Wards :</h6>
       <div className='wards d-flex align-items-center justify-content-center flex-wrap '>
-      <button style={{backgroundColor:"#B4D6F1"}}  className=" btn primary_btn  mx-4 px-4 py-1 mb-3 ">
+      <button onClick={veiwSchedule} style={{backgroundColor:"#B4D6F1"}}  className=" clickable btn primary_btn  mx-4 px-4 py-1 mb-3 ">
       Dematagoda
         </button>
-        <button style={{backgroundColor:"#B4D6F1"}}  className=" btn primary_btn  mx-4 px-4 py-1 mb-3 ">
+        <button onClick={veiwSchedule} style={{backgroundColor:"#B4D6F1"}}  className="clickable btn primary_btn  mx-4 px-4 py-1 mb-3 ">
       Dematagoda
         </button>
-        <button style={{backgroundColor:"#B4D6F1"}}  className=" btn primary_btn  mx-4 px-4 py-1 mb-3 ">
+        <button onClick={veiwSchedule} style={{backgroundColor:"#B4D6F1"}}  className="clickable btn primary_btn  mx-4 px-4 py-1 mb-3 ">
       Dematagoda
         </button>
-        <button style={{backgroundColor:"#B4D6F1"}}  className=" btn primary_btn  mx-4 px-4 py-1 mb-3 ">
+        <button onClick={veiwSchedule} style={{backgroundColor:"#B4D6F1"}}  className="clickable btn primary_btn  mx-4 px-4 py-1 mb-3 ">
       Dematagoda
         </button>
-        <button style={{backgroundColor:"#B4D6F1"}}  className=" btn primary_btn  mx-4 px-4 py-1 mb-3 ">
+        <button onClick={veiwSchedule} style={{backgroundColor:"#B4D6F1"}}  className="clickable btn primary_btn  mx-4 px-4 py-1 mb-3 ">
       Dematagoda
         </button>
-        <button style={{backgroundColor:"#B4D6F1"}}  className=" btn primary_btn  mx-4 px-4 py-1 mb-3 ">
+        <button onClick={veiwSchedule} style={{backgroundColor:"#B4D6F1"}}  className="clickable btn primary_btn  mx-4 px-4 py-1 mb-3 ">
       Dematagoda
         </button>
-        <button style={{backgroundColor:"#B4D6F1"}}  className=" btn primary_btn mx-4 px-4 py-1 mb-3 ">
+        <button onClick={veiwSchedule} style={{backgroundColor:"#B4D6F1"}}  className="clickable btn primary_btn mx-4 px-4 py-1 mb-3 ">
       Dematagoda
         </button>
       </div>

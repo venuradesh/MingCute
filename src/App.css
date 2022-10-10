@@ -48,7 +48,8 @@
   font-weight: 600;
 }
 .clickable{
-  cursor: pointer !important
+  cursor: pointer !important;
+  text-decoration: none !important;
 }
 
 .proceed_btn{
@@ -114,9 +115,20 @@
 .side_body ul path{
   fill: #fff
 }
+.selected_side h6{
+  color: #007AFF !important;
+}
+.link{
+  text-decoration: none !important;
+
+}
+.selected_side path{
+  fill: #007AFF !important
+}
 li{
   border-radius: 5px;
   padding: 5px ;
+  text-decoration: none;
 }
 li:hover  {
   fill: #a0a0a0 !important;
