@@ -1,8 +1,18 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 
 const table_array=[1,2,3,4,5,6,7,8]
 
 function AreaFeedList() {
+  const [data, setData] = useState([])
+  useEffect(() => {
+    axios.get('https://66c3-123-231-61-157.in.ngrok.io/get-feedback-data')
+      .then(function (response) {
+        setData(response.data)
+        console.log(response);
+      })
+  })
+
   return (
     <div className="h-100   container-fluid">
     <div className="main_body vehicle_table">
@@ -41,17 +51,22 @@ function AreaFeedList() {
                 </thead>
                 <tbody>
                
-                  <tr >
-                    <td className=''><h6 className='mb-0'>mal@gmail.com</h6></td>
-                    <td>Dematagoda</td>
-                    <td>well clean</td>
-                    <td className='text-center'> <button type='button' className='btn positive'>Positive</button> </td>
-                    <td className='text-center'>
-                    <span className='positive d-flex align-items-center justify-content-center mx-auto'>5</span>
-                          </td>
-                  </tr>
+                  
+                  { data.length > 0 && data.map((cont, index) => (
+                      <tr key={index} >
+                          <td>{cont.id} </td>
+                          
+                          <td>{cont.Main_Area} </td>
+                          <td>{cont.Feedback} </td>
+                          <td>{cont.analysis} </td>
+                          
+                          <td>{cont.ratings} </td>
+                      </tr>
+                    ))
+                  }
+                 
 
-                  <tr >
+                  {/* <tr >
                     <td className=''><h6 className='mb-0'>Albert@gmail.com</h6></td>
                     <td>Hallo</td>
                     <td>lorem</td>
@@ -99,7 +114,7 @@ function AreaFeedList() {
                     <td className='text-center'>
                         <span className=' positive d-flex align-items-center justify-content-center mx-auto'>5</span>
                           </td>
-                  </tr>
+                  </tr> */}
               
                 </tbody>
               </table>

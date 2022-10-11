@@ -209,9 +209,10 @@ function Sidebar() {
                 </g>
               </svg>
             </div>
-            <h6 className="mb-0 secondary_text d-none d-lg-block">
-            Feedback Management
+            <Link to="/admin/ad/frame20" className="d-flex clickable align-items-center justify-content-center justify-content-lg-start"  aria-current="page">
+            <h6>Feedback Management
             </h6>
+            </Link>
           </li>
 
           <li className="my-4 ">
