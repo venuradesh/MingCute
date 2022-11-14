@@ -1,17 +1,20 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-const API_URL = "";
+const API_URL = "https://1ef2-112-135-71-163.in.ngrok.io/feedback-list";
 
 function AreaFeedList() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    // axios.get('https://66c3-123-231-61-157.in.ngrok.io/get-feedback-data')
-    axios.get(API_URL).then(function (response) {
-      setData(response.data);
-      console.log(response);
-    });
-  });
+    axios
+      .get(API_URL)
+      .then(function (response) {
+        setData(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <div className="h-100   container-fluid">
@@ -43,65 +46,19 @@ function AreaFeedList() {
                     {data.length > 0 &&
                       data.map((cont, index) => (
                         <tr key={index}>
-                          <td>{cont.id} </td>
-
-                          <td>{cont.Main_Area} </td>
-                          <td>{cont.Feedback} </td>
-                          <td>{cont.analysis} </td>
-
-                          <td>{cont.ratings} </td>
+                          {index !== 0 ? (
+                            <>
+                              <td>{cont.name} </td>
+                              <td>{cont.area} </td>
+                              <td>{cont.feedback} </td>
+                              <td>{cont.feedback_type} </td>
+                              <td>{cont.rating} </td>
+                            </>
+                          ) : (
+                            <></>
+                          )}
                         </tr>
                       ))}
-
-                    {/* <tr >
-                    <td className=''><h6 className='mb-0'>Albert@gmail.com</h6></td>
-                    <td>Hallo</td>
-                    <td>lorem</td>
-                    <td className='text-center'> <button type='button' className='btn neutral'>Neutral</button> </td>
-                    <td className='text-center'>
-                    <span className='neutral d-flex align-items-center justify-content-center mx-auto'>3</span>
-                          </td>
-                  </tr>
-
-                  <tr >
-                    <td className=''><h6 className='mb-0'>Albert Flores</h6></td>
-                    <td>Hallo</td>
-                    <td>ipsum</td>
-                    <td className='text-center'> <button type='button' className='btn negative'>Negative</button> </td>
-                    <td className='text-center'>
-                    <span className='positive d-flex align-items-center justify-content-center mx-auto'>5</span>
-                          </td>
-                  </tr>
-
-                  <tr >
-                    <td className=''><h6 className='mb-0'>Albert Flores</h6></td>
-                    <td>Hallo</td>
-                    <td>halum</td>
-                    <td className='text-center'> <button type='button' className='btn positive'>Positive</button> </td>
-                    <td className='text-center'>
-                    <span className='negative d-flex align-items-center justify-content-center mx-auto'>2</span>
-                          </td>
-                  </tr>
-
-                  <tr >
-                    <td className=''><h6 className='mb-0'>Albert Flores</h6></td>
-                    <td>Hallo</td>
-                    <td>Lorem</td>
-                    <td className='text-center'> <button type='button' className='btn neutral'>Neutral</button> </td>
-                    <td className='text-center'>
-                        <span className='neutral d-flex align-items-center justify-content-center mx-auto'>3</span>
-                          </td>
-                  </tr>
-
-                  <tr >
-                    <td className=''><h6 className='mb-0'>Albert Flores</h6></td>
-                    <td>Hallo</td>
-                    <td>2022.07.24 - Friday</td>
-                    <td className='text-center'> <button type='button' className='btn negative'>Negative</button> </td>
-                    <td className='text-center'>
-                        <span className=' positive d-flex align-items-center justify-content-center mx-auto'>5</span>
-                          </td>
-                  </tr> */}
                   </tbody>
                 </table>
               </div>
