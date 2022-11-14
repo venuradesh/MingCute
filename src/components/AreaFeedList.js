@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-const API_URL = "https://1ef2-112-135-71-163.in.ngrok.io/feedback-list";
+const API_URL = "https://c5cd-112-135-69-207.in.ngrok.io/feedback-list";
 
 function AreaFeedList() {
   const [data, setData] = useState([]);
