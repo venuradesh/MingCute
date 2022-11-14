@@ -10,7 +10,6 @@ function Vs02() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  console.log(location.state.data.place);
 
   function viewSummary() {
     navigate("../schedule/frame7");
@@ -18,6 +17,7 @@ function Vs02() {
   function viewSchedule() {
     navigate("../schedule/frame8", { state: { location } });
   }
+  console.log(location.state.data.place);
 
   return (
     <div className="h-100 container-fluid">

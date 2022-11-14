@@ -1,16 +1,24 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { useNavigate, useLocation } from "react-router-dom";
 
+
+// https://a249-112-134-219-1.ap.ngrok.io/time-table/Dematagoda
 function Vs01() {
   const navigate = useNavigate();
   const location = useLocation();
   const [table_array, setTableArray] = useState([]);
-  const API_URL = `https://d9d6-112-134-218-60.ap.ngrok.io/table/random/${location.state.place.charAt(0).toUpperCase() + location.state.place.slice(1)}`;
+
+  function viewSummary() {
+    navigate("../schedule/frame7");
+  }
+  function viewSchedule() {
+    navigate("../schedule/frame8", { state: { data: location.state } });
+  }
 
   useEffect(() => {
     axios
-      .get(API_URL)
+      .get(`https://09f4-112-135-71-163.in.ngrok.io/table/random/Dematagoda`)
       .then((response) => {
         setTableArray(response.data);
       })
@@ -19,19 +27,13 @@ function Vs01() {
       });
   }, []);
 
-  function viewSummary() {
-    navigate("../schedule/frame7");
-  }
-  function viewSchedule() {
-    navigate("../schedule/frame8");
-  }
+
+
+
   return (
     <div className="h-100   container-fluid">
       <div className="main_body">
         <div className="card_body shedule_table container mt-5">
-          <div className="top w-100 ">
-            <button className=" btn status primary_btn ms-auto d-flex align-items-center justify-content-end py-1 mb-3 ">hello</button>
-          </div>
           <div>
             <div className="mt-3 schedules d-flex align-items-center justify-content-between ">
               <div onClick={viewSummary} className="schedule clickable h6 mb-0 py-2 title_tab text-center">
@@ -42,8 +44,8 @@ function Vs01() {
               </div>
             </div>
             <div className="card table_card py-3 px-4">
-              <table className="table">
-                <thead className="table-dark">
+              <table class="table">
+                <thead class="table-dark">
                   <tr>
                     <th>Time</th>
                     <th>Monday</th>
@@ -56,7 +58,8 @@ function Vs01() {
                   </tr>
                 </thead>
                 <tbody>
-                  {table_array.map((cont, index) => (
+
+                {table_array.map((cont, index) => (
                     <tr key={index}>
                       <td>{Object.keys(cont)[0]}</td>
                       {cont[Object.keys(cont)[0]].map((datas, key) => (
@@ -73,6 +76,30 @@ function Vs01() {
                       ))}
                     </tr>
                   ))}
+                  {/* {data.length > 0 &&
+                    data.map((cont, index) => (
+                      <tr >
+                        <td >"sad"
+                        {(cont.Monday && cont.Monday.length > 0) && cont.Monday.map((item,index)=><div key={index+"0"}>
+                          <div>
+                          {Object.keys(item)[0]}
+
+                          </div>
+                          {item[Object.keys(item)[0]].map((bale)=>(<div className={"ml-5 pl-5"}>{bale["Driver's Name"]}</div>))}
+                          
+                          </div>
+                          
+                          )}
+                           </td>
+                        <td >Text </td>
+                        <td >Text </td>
+                        <td >Text </td>
+                        <td >Text </td>
+                        <td >Text </td>
+                        <td >Text </td>
+                      </tr>
+                    ))
+                  } */}
                 </tbody>
               </table>
             </div>
@@ -80,7 +107,7 @@ function Vs01() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Vs01;
+export default Vs01
