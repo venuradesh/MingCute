@@ -1,21 +1,29 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { data } from "../constants";
+const check = "/mainIcons/check-circle.svg"
+const cross = "/mainIcons/x-circle.svg"
+
 const table_array = [1, 2, 3, 4, 5, 6, 7, 8];
 
 function Vs02() {
   const navigate = useNavigate();
-  
+  const location = useLocation();
+
+  console.log(location.state.data.place);
+
   function viewSummary() {
     navigate("../schedule/frame7");
   }
   function viewSchedule() {
-    navigate("../schedule/frame8");
+    navigate("../schedule/frame8", { state: { location } });
   }
+
   return (
     <div className="h-100 container-fluid">
       <div className="main_body">
         <div className="card_body shedule_table container mt-5">
-        <div className="top w-100 ">
+          <div className="top w-100 ">
             <button className=" btn status primary_btn ms-auto d-flex align-items-center justify-content-end py-1 mb-3 ">
               back
             </button>
@@ -35,174 +43,22 @@ function Vs02() {
                 <tr>
                   <th>Road Name</th>
                   <th>Once a day</th>
-                  <th>Alternative days</th>
-                  <th>Thrice a week</th>
                   <th>Twice a week</th>
+                  <th>{`Thrice a week`}</th>
                 </tr>
               </thead>
               <tbody>
-                {table_array.map((item, index) => (
+                {data[location.state.data.place].map((item, index) => (
                   <tr>
-                    <td>Seevali lane (address) </td>
+                    <td>{item.road}</td>
                     <td className="text-center">
-                      <svg
-                        width="24px"
-                        height="24px"
-                        viewBox="0 0 24 24"
-                        version="1.1"
-                      >
-                        <g
-                          id="页面-1"
-                          stroke="none"
-                          stroke-width="1"
-                          fill="none"
-                          fill-rule="evenodd"
-                        >
-                          <g
-                            id="System"
-                            transform="translate(-144.000000, -48.000000)"
-                            fill-rule="nonzero"
-                          >
-                            <g
-                              id="check_circle_fill"
-                              transform="translate(144.000000, 48.000000)"
-                            >
-                              <rect
-                                id="矩形"
-                                x="0"
-                                y="0"
-                                width="24"
-                                height="24"
-                              ></rect>
-                              <path
-                                d="M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 C6.47715,22 2,17.5228 2,12 C2,6.47715 6.47715,2 12,2 Z M15.5354,8.38136 L10.5856,13.3311 L8.46431,11.2098 C8.07379,10.8193 7.44063,10.8193 7.0501,11.2098 C6.65958,11.6003 6.65958,12.2335 7.0501,12.624 L9.80782,15.3817 C10.2374,15.8113 10.9339,15.8113 11.3635,15.3817 L16.9496,9.79557 C17.3401,9.40505 17.3401,8.77188 16.9496,8.38136 C16.5591,7.99083 15.9259,7.99083 15.5354,8.38136 Z"
-                                id="形状"
-                                fill="#2AC670FF"
-                              ></path>
-                            </g>
-                          </g>
-                        </g>
-                      </svg>
+                      <img src={item.once} alt={"once"} />
                     </td>
                     <td className="text-center">
-                      <svg
-                        width="24px"
-                        height="24px"
-                        viewBox="0 0 24 24"
-                        version="1.1"
-                      >
-                        <g
-                          id="页面-1"
-                          stroke="none"
-                          stroke-width="1"
-                          fill="none"
-                          fill-rule="evenodd"
-                        >
-                          <g
-                            id="System"
-                            transform="translate(-144.000000, -48.000000)"
-                            fill-rule="nonzero"
-                          >
-                            <g
-                              id="check_circle_fill"
-                              transform="translate(144.000000, 48.000000)"
-                            >
-                              <rect
-                                id="矩形"
-                                x="0"
-                                y="0"
-                                width="24"
-                                height="24"
-                              ></rect>
-                              <path
-                                d="M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 C6.47715,22 2,17.5228 2,12 C2,6.47715 6.47715,2 12,2 Z M15.5354,8.38136 L10.5856,13.3311 L8.46431,11.2098 C8.07379,10.8193 7.44063,10.8193 7.0501,11.2098 C6.65958,11.6003 6.65958,12.2335 7.0501,12.624 L9.80782,15.3817 C10.2374,15.8113 10.9339,15.8113 11.3635,15.3817 L16.9496,9.79557 C17.3401,9.40505 17.3401,8.77188 16.9496,8.38136 C16.5591,7.99083 15.9259,7.99083 15.5354,8.38136 Z"
-                                id="形状"
-                                fill="#2AC670FF"
-                              ></path>
-                            </g>
-                          </g>
-                        </g>
-                      </svg>
+                      <img src={item.twice} alt={"twice"} />
                     </td>
                     <td className="text-center">
-                      <svg
-                        width="24px"
-                        height="24px"
-                        viewBox="0 0 24 24"
-                        version="1.1"
-                      >
-                        <g
-                          id="页面-1"
-                          stroke="none"
-                          stroke-width="1"
-                          fill="none"
-                          fill-rule="evenodd"
-                        >
-                          <g
-                            id="System"
-                            transform="translate(-144.000000, -48.000000)"
-                            fill-rule="nonzero"
-                          >
-                            <g
-                              id="check_circle_fill"
-                              transform="translate(144.000000, 48.000000)"
-                            >
-                              <rect
-                                id="矩形"
-                                x="0"
-                                y="0"
-                                width="24"
-                                height="24"
-                              ></rect>
-                              <path
-                                d="M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 C6.47715,22 2,17.5228 2,12 C2,6.47715 6.47715,2 12,2 Z M15.5354,8.38136 L10.5856,13.3311 L8.46431,11.2098 C8.07379,10.8193 7.44063,10.8193 7.0501,11.2098 C6.65958,11.6003 6.65958,12.2335 7.0501,12.624 L9.80782,15.3817 C10.2374,15.8113 10.9339,15.8113 11.3635,15.3817 L16.9496,9.79557 C17.3401,9.40505 17.3401,8.77188 16.9496,8.38136 C16.5591,7.99083 15.9259,7.99083 15.5354,8.38136 Z"
-                                id="形状"
-                                fill="#2AC670FF"
-                              ></path>
-                            </g>
-                          </g>
-                        </g>
-                      </svg>
-                    </td>
-                    <td className="text-center">
-                      <svg
-                        width="24px"
-                        height="24px"
-                        viewBox="0 0 24 24"
-                        version="1.1"
-                      >
-                        <g
-                          id="页面-1"
-                          stroke="none"
-                          stroke-width="1"
-                          fill="none"
-                          fill-rule="evenodd"
-                        >
-                          <g
-                            id="System"
-                            transform="translate(-144.000000, -48.000000)"
-                            fill-rule="nonzero"
-                          >
-                            <g
-                              id="check_circle_fill"
-                              transform="translate(144.000000, 48.000000)"
-                            >
-                              <rect
-                                id="矩形"
-                                x="0"
-                                y="0"
-                                width="24"
-                                height="24"
-                              ></rect>
-                              <path
-                                d="M12,2 C17.5228,2 22,6.47715 22,12 C22,17.5228 17.5228,22 12,22 C6.47715,22 2,17.5228 2,12 C2,6.47715 6.47715,2 12,2 Z M15.5354,8.38136 L10.5856,13.3311 L8.46431,11.2098 C8.07379,10.8193 7.44063,10.8193 7.0501,11.2098 C6.65958,11.6003 6.65958,12.2335 7.0501,12.624 L9.80782,15.3817 C10.2374,15.8113 10.9339,15.8113 11.3635,15.3817 L16.9496,9.79557 C17.3401,9.40505 17.3401,8.77188 16.9496,8.38136 C16.5591,7.99083 15.9259,7.99083 15.5354,8.38136 Z"
-                                id="形状"
-                                fill="#2AC670FF"
-                              ></path>
-                            </g>
-                          </g>
-                        </g>
-                      </svg>
+                      <img src={item.thrice} alt={"thrice"} />
                     </td>
                   </tr>
                 ))}

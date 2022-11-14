@@ -79,46 +79,7 @@ function Sidebar4() {
       </div>
         <h5 className="light_text mb-0 text-center d-none d-lg-block">Admin</h5>
 
-      <div className="side_search_grp d-none d-lg-flex rounded-2  align-items-center justify-content-start  ps-2 py-1">
-        <div className="">
-          <svg
-            className="me-2"
-            width="23px"
-            height="23px"
-            viewBox="0 0 23 23"
-            version="1.1"
-          >
-            <g
-              id="页面-1"
-              stroke="none"
-              strokeWidth="1"
-              fill="none"
-              fillRule="evenodd"
-            >
-              <g id="File" transform="translate(-960.000000, 0.000000)">
-                <g id="search_line" transform="translate(960.000000, 0.000000)">
-                  <rect
-                    id="矩形"
-                    fillRule="nonzero"
-                    x="0"
-                    y="0"
-                    width="24"
-                    height="24"
-                  ></rect>
-                  <path
-                    d="M10.5,2 C5.80558,2 2,5.80558 2,10.5 C2,15.1944 5.80558,19 10.5,19 C12.4869,19 14.3146,18.3183 15.7619,17.176 L19.4142,20.8283 C19.8047,21.2188 20.4379,21.2188 20.8284,20.8283 C21.2189,20.4378 21.2189,19.8046 20.8284,19.4141 L17.1761,15.7618 C18.3183,14.3145 19,12.4868 19,10.5 C19,5.80558 15.1944,2 10.5,2 Z M4,10.5 C4,6.91015 6.91015,4 10.5,4 C14.0899,4 17,6.91015 17,10.5 C17,14.0899 14.0899,17 10.5,17 C6.91015,17 4,14.0899 4,10.5 Z"
-                    id="形状"
-                  ></path>
-                </g>
-              </g>
-            </g>
-          </svg>
-        </div>
-        <input
-          className="formControl primary_text "
-          type="text"
-          placeholder="Search"
-        />
+      <div className="side_search_grp d-none d-lg-flex rounded-2 border-0 align-items-center justify-content-start  ps-2 py-1">
       </div>
 
       <div className="side_body pb-4">
@@ -265,7 +226,7 @@ function Sidebar4() {
           </ul>
 
           {/* <Link to="/admin/schedule/frame6" className="link" > */}
-        <div className="dash   my-3 d-flex align-items-end justify-content-center justify-content-lg-start">
+        {/* <div className="dash   my-3 d-flex align-items-end justify-content-center justify-content-lg-start">
           <div className="me-lg-2 ">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 5C2.5 3.61929 3.61929 2.5 5 2.5H15C16.3807 2.5 17.5 3.61929 17.5 5V15C17.5 16.3807 16.3807 17.5 15 17.5H5C3.61929 17.5 2.5 16.3807 2.5 15V5ZM11.6667 11.6667C11.6667 11.2064 12.0398 10.8333 12.5 10.8333H15.8333V5C15.8333 4.53977 15.4602 4.16667 15 4.16667H5C4.53977 4.16667 4.16667 4.53977 4.16667 5V10.8333H7.5C7.96023 10.8333 8.33333 11.2064 8.33333 11.6667C8.33333 12.5872 9.0795 13.3333 10 13.3333C10.9205 13.3333 11.6667 12.5872 11.6667 11.6667Z" fill="white" fill-opacity="0.5"/>
@@ -273,7 +234,7 @@ function Sidebar4() {
 
           </div>
           <h6 className="mb-0 secondary_text  d-none d-lg-block">Area Status</h6>
-        </div>
+        </div> */}
         {/* </Link> */}
 
 

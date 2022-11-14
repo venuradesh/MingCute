@@ -73,46 +73,7 @@ function Sidebar3() {
         <h5 className="light_text mb-0 d-none d-lg-block">MingCute</h5>
       </div>
 
-      <div className="side_search_grp d-none d-lg-flex rounded-2  align-items-center justify-content-start  ps-2 py-1">
-        <div className="">
-          <svg
-            className="me-2"
-            width="23px"
-            height="23px"
-            viewBox="0 0 23 23"
-            version="1.1"
-          >
-            <g
-              id="页面-1"
-              stroke="none"
-              strokeWidth="1"
-              fill="none"
-              fillRule="evenodd"
-            >
-              <g id="File" transform="translate(-960.000000, 0.000000)">
-                <g id="search_line" transform="translate(960.000000, 0.000000)">
-                  <rect
-                    id="矩形"
-                    fillRule="nonzero"
-                    x="0"
-                    y="0"
-                    width="24"
-                    height="24"
-                  ></rect>
-                  <path
-                    d="M10.5,2 C5.80558,2 2,5.80558 2,10.5 C2,15.1944 5.80558,19 10.5,19 C12.4869,19 14.3146,18.3183 15.7619,17.176 L19.4142,20.8283 C19.8047,21.2188 20.4379,21.2188 20.8284,20.8283 C21.2189,20.4378 21.2189,19.8046 20.8284,19.4141 L17.1761,15.7618 C18.3183,14.3145 19,12.4868 19,10.5 C19,5.80558 15.1944,2 10.5,2 Z M4,10.5 C4,6.91015 6.91015,4 10.5,4 C14.0899,4 17,6.91015 17,10.5 C17,14.0899 14.0899,17 10.5,17 C6.91015,17 4,14.0899 4,10.5 Z"
-                    id="形状"
-                  ></path>
-                </g>
-              </g>
-            </g>
-          </svg>
-        </div>
-        <input
-          className="formControl primary_text "
-          type="text"
-          placeholder="Search"
-        />
+      <div className="side_search_grp d-none d-lg-flex rounded-2 border-0 align-items-center justify-content-start  ps-2 py-1">
       </div>
 
       <div className="side_body pb-4">

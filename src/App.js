@@ -1,4 +1,4 @@
-import {Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import './App.css';
 import Agr from "./components/Agr";
 import Agr2 from "./components/Agr2";
@@ -26,37 +26,42 @@ import Vs04 from "./components/Vs04";
 import WeatherForacst from "./components/weatherForacst";
 import Dashboard from './pages/Dashboard';
 import Login from "./pages/Login";
+import VsEvent from './components/Vs-event';
+import VsAdditonal from './components/Vs-additional';
+
 
 function App() {
-  
+
   return (
     <div className="App h-100">
       <Routes>
-        <Route  path="/" element={<Navigate replace to="/admin/frame1"/>}/>
+        <Route path="/" element={<Navigate replace to="/admin/frame1" />} />
         <Route path="/admin" element={<Dashboard />} >
-          <Route path={`frame1`}  element={<SelectPlace/>}/>
-          <Route path="frame2" element={< CommonDash />}/>
-          <Route path="schedule/frame3" element={< Vcm03 />}/>
-          <Route path="schedule/frame4" element={<Agr />}/>
-          <Route path="schedule/frame5" element={< WeatherForacst/>}/>
-          <Route path="schedule/frame6" element={<MS />}/> 
-          <Route path="schedule/frame7" element={<Vs01/>}/>
-          <Route path="schedule/frame8" element={<Vs02/>}/>
-          <Route path="schedule/frame9" element={<Vs03/>}/>
-          <Route path="schedule/frame10" element={<Vs04/>}/>
-          <Route path="schedule/frame11" element={< Vcm04 />}/>
-          <Route path="schedule/frame12" element={<Vcm02/>}/>
-          <Route path="schedule/frame13" element={<Vcm01/>}/>
-          <Route path="schedule/frame14" element={<Agr2 />}/> 
-          <Route path="schedule/frame15" element={<Leave/>}/>
-          <Route path="ad/frame16" element={<LabourReg/>}/>
-          <Route path="ad/frame17" element={<LabourReg2/>}/>
-          <Route path="ad/frame18" element={<AreaFeedback/>}/>
-          <Route path="ad/frame19" element={<AgrForm/>}/>
-          <Route path="ad/frame20" element={<AreaFeedList/>}/>
-          <Route path="ad/frame21" element={<AreaFeedChart/>}/>
+          <Route path={`frame1`} element={<SelectPlace />} />
+          <Route path="frame2" element={< CommonDash />} />
+          <Route path="schedule/frame3" element={< Vcm03 />} />
+          <Route path="schedule/frame4" element={<Agr />} />
+          <Route path="schedule/frame5" element={< WeatherForacst />} />
+          <Route path="schedule/frame6" element={<MS />} />
+          <Route path="schedule/frame7" element={<Vs01 />} />
+          <Route path="schedule/frame8" element={<Vs02 />} />
+          <Route path="schedule/frame9" element={<Vs03 />} />
+          <Route path="schedule/frame10" element={<Vs04 />} />
+          <Route path="schedule/frame11" element={< Vcm04 />} />
+          <Route path="schedule/frame12" element={<Vcm02 />} />
+          <Route path="schedule/frame13" element={<Vcm01 />} />
+          <Route path="schedule/frame14" element={<Agr2 />} />
+          <Route path="schedule/frame15" element={<Leave />} />
+          <Route path="ad/frame16" element={<LabourReg />} />
+          <Route path="ad/frame17" element={<LabourReg2 />} />
+          <Route path="ad/frame18" element={<AreaFeedback />} />
+          <Route path="ad/frame19" element={<AgrForm />} />
+          <Route path="ad/frame20" element={<AreaFeedList />} />
+          <Route path="ad/frame21" element={<AreaFeedChart />} />
+          <Route path="schedule/frameevent" element={<VsEvent />} />
+          <Route path="schedule/frameaditional" element={<VsAdditonal />} />
         </Route>
-        <Route path="/login" element={<Login/>} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );
